@@ -1,11 +1,11 @@
 
 /**
- * Session 4 Take Home Lab (Model/ModelTester project)
+ * Session 4 Take Home Lab (Model/ModelTester project) <br>
  * Class: Model Class for Lab4 COMP 1409
  * 
  * @author Krzysztof Szczurowski
  * @date 10/16/2016
- * @version 1.1 //more in Readme.txt
+ * @version 1.1 *more in Readme.txt*
  * @since 10/10/2016
  * @see https://learn.bcit.ca/d2l/le/content/331960/viewContent/2078019/View
  */
@@ -33,7 +33,7 @@ public class Model
     /**
      * Public parameterless Model constructor
      * Initializing all local variables to specified, default values
-     * Increments each newly created object of type Model
+     * Increments each newly created object of a type Model
      */
     public Model()
     {
@@ -145,7 +145,7 @@ public class Model
     }
     
     /**
-     * Publuc setter for Model's Height. <br>
+     * Public setter for Model's Height. <br>
      * Takes value as a new Height to setup <br>
      * It does not return value.
      * @param takes value as String
@@ -266,7 +266,7 @@ public class Model
     }
     
     /**
-     * Publice methos that display String with representation of class Model
+     * Public method that display String with representation of class Model
      * It does not take any parameter; <br>
      * @return returns text representation of Model Class as String;
      */

@@ -21,8 +21,7 @@ public class ModelTester
         System.out.println("Model's Height in Feet and Inches: " + model1.convertHeightToFeetAndInches());
         System.out.println("Model 1 hourly rate: " + model1.calculateHourlyRate());
         model1.displayModel();
-        
-        
+               
         System.out.println("\n");
         System.out.println("Model's Height in Feet and Inches: " + model2.convertHeightToFeetAndInches());
         System.out.println("Model 2 hourly rate: " + model2.calculateHourlyRate());
