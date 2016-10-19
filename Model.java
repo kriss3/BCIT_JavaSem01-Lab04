@@ -1,9 +1,13 @@
 
 /**
- * Base Model Class for Lab4 COMP 1409
+ * Session 4 Take Home Lab (Model/ModelTester project)
+ * Class: Model Class for Lab4 COMP 1409
  * 
  * @author Krzysztof Szczurowski
- * @version 1.0
+ * @date 10/16/2016
+ * @version 1.1 //more in Readme.txt
+ * @since 10/10/2016
+ * @see https://learn.bcit.ca/d2l/le/content/331960/viewContent/2078019/View
  */
 public class Model
 {
@@ -22,100 +26,189 @@ public class Model
     private String name;
     private String surname;
     private double height;
-    private boolean doesWorkOut;
+    private boolean doesWorkout;
     private boolean canTravel;
     private boolean doesSmoke;
     
+    /**
+     * Public parameterless Model constructor
+     * Initializing all local variables to specified, default values
+     * Increments each newly created object of type Model
+     */
     public Model()
     {
         this.name = "Robin";
         this.surname = "Wright";
         this.height = 212;
-        this.doesWorkOut = true;
+        this.doesWorkout = true;
         this.canTravel = true;
         this.doesSmoke = true;
         
-        employeeCounter++;
-        employeeNumber = employeeCounter;
+        employeeNumber = employeeCounter++;
     }
     
-    public Model(String name, String surname, double height, boolean doesWorkOut, 
+    /**
+     * Public custom constructor. Takes six parameters described below: <br>
+     * @param name as String;
+     * @param surname as String;
+     * @param height as double;
+     * @param doesWorkout as boolean;
+     * @param canTravel as boolean;
+     * @param doesSmoke as boolean;
+     * 
+     * Increments each newly created object of type Model <br>
+     * Uses mutators to set values of instance variables
+     */
+    public Model(String name, String surname, double height, boolean doesWorkout, 
                  boolean canTravel, boolean doesSmoke)
     {
        setName(name);
        setSurname(surname);
        setHeight(height);
-       
-       employeeCounter++;
-       employeeNumber = employeeCounter;
+       employeeNumber = employeeCounter++;
     }
     
     //Properties
+    /**
+     * Public getter for Employee Number
+     * @return current employee number as Integer
+     */
     public int getEmployeeNumber()
     {
-        return employeeNumber;
+        return this.employeeNumber;
     }
     
+    /**
+     * Public static getter for EmployeeCounter.<br>
+     * Takes no parameter;
+     * @return returns Employee counter as interger;
+     */
     public static int getEmployeeCounter()
     {
         return employeeCounter;
     }
     
+    /**
+     * Public getter for Employee Number <br>
+     * Does not take any parameter;
+     * @return Name as String;
+     */
     public String getName()
     {
         return this.name;
     }
     
+    /**
+     * Publuc setter for Model's name. <br>
+     * Takes value as a new Name to setup. <br>
+     * It does not return value.
+     * @param takes value as String
+     */
     public final void  setName(String value)
     {
         this.name = value.equals("") || value == null ? "Robin" : value; 
     }
     
+    /**
+     * Public getter for Surname <br>
+     * Does not take any parameter;
+     * @return returns Surname as String
+     */
     public String getSurname()
     {
         return this.name;
     }
     
+    /**
+     * Publuc setter for Model's Surname. <br>
+     * Takes value as a new Surname to setup; <br>
+     * It does not return value.
+     * @param takes value as String
+     */
     public final void  setSurname(String value)
     {
         this.name = value.equals("") || value == null ? "Wright" : value; 
     }
     
+    /**
+     * Public getter for model Height <br>
+     * Does not take any parameter;
+     * @return returns Height as double
+     */
     public double getHeight()
     {
         return this.height;
     }
     
+    /**
+     * Publuc setter for Model's Height. <br>
+     * Takes value as a new Height to setup <br>
+     * It does not return value.
+     * @param takes value as String
+     */
     public final void  setHeight(double value)
     {
         this.height = value > 182.3 || value < 213.4  ? value : 5.8; 
     }
     
-    public boolean DoesWorkOut()
+    /**
+     * Public getter for model Workout flag <br>
+     * Does not take any parameter;
+     * @return returns Workout flag as boolean
+     */
+    public boolean doesWorkout()
     {
-        return this.doesWorkOut;
+        return this.doesWorkout;
     }
     
-    public final void DoesWorkOut(boolean value)
+    /**
+     * Public setter for model Workout flag <br>
+     * Takes value as a new doesWorkout flat to set <br>
+     * It does not return value.
+     * @param takes value doesWorkout as boolean
+     */
+    public final void doesWorkout(boolean value)
     {
-        this.doesWorkOut = value;
+        this.doesWorkout = value;
     }
     
+    /**
+     * Public getter for model Travel flag <br>
+     * Does not take any parameter;
+     * @return returns canTravel flag as boolean
+     */
     public boolean CanTravel()
     {
         return this.canTravel;
     }
     
+    /**
+     * Public setter for Model's Trabel flag <br>
+     * Takes value as a new canTravel flag to set <br>
+     * It does not return value.
+     * @param takes value canTravel as boolean
+     */
     public final void CanTravel(boolean value)
     {
         this.canTravel = value;
     }
     
+    /**
+     * Public getter for model Smoke flag <br>
+     * Does not take any parameter;
+     * @return returns doesSmoke flag as boolean
+     */
     public boolean DoesSmoke()
     {
         return this.doesSmoke;
     }
     
+    /**
+     * Public setter for model Smoke flag <br>
+     * Takes value as a new Smoke flag to set <br>
+     * It does not return value.
+     * @param takes value canSmoke as boolean
+     */
     public final void DoesSmoke(boolean value)
     {
         this.doesSmoke = value;
@@ -140,42 +233,57 @@ public class Model
         return String.format((int)feet + " feet " + String.format("%.1f", inches) + " inches"); 
     }
     
-    public int calculateHourlyRate()
+    /**
+     * Public method that calculates the Model's hourly rate; <br>
+     * It does not take any parameter; <br>
+     * Evaluates hourly rate and adjust based on Travel, Workout and Smoke preferences.
+     * @return returns calculated hourly rate as double
+     */
+    public double calculateHourlyRate()
     {
-        double hRate = BASE_RATE ;
+        double hireRate = BASE_RATE ;
         
-        if(doesWorkOut && (height >= TALL_CM))
+        if(doesWorkout && (height >= TALL_CM))
         {
-            hRate += TALL_FIT_BONUS;
+            hireRate += TALL_FIT_BONUS;
         }
         
         if(canTravel)
         {
-            hRate += TRAVEL_BONUS;
+            hireRate += TRAVEL_BONUS;
         }
         
         if(doesSmoke)
         {
-            hRate -= SMOKER_DEDUCTION;
+            hireRate -= SMOKER_DEDUCTION;
         }
         
-        //possible loss of decimal part, funciton returns int but BASE_RATE is double      
-        return (int)hRate;
+        return hireRate;
     }
     
+    /**
+     * Publice methos that display String with representation of class Model
+     * It does not take any parameter; <br>
+     * @return returns text representation of Model Class as String;
+     */
     public String toString()
     {
         return String.format("Name: " + name +
                              ";Last Name: " + surname + 
                              ";Height: " + height + "cm" +
-                             ";WorkOut[?]: " + doesWorkOut +
+                             ";WorkOut[?]: " + doesWorkout +
                              ";Travel[?]: " + canTravel +
                              ";Smokes[?]:" + doesSmoke);
     }
     
+    /**
+     * Public method that prints the details of the class Model;
+     * It does not take any parameter; <br>
+     * It does not return any value;
+     */
     public void displayModel()
     {
         System.out.print("Name:\t\t" + name +  "\nSurname:\t" + surname + "\nHeight:\t\t" + height + "cm" +
-        "\nWorkOut[?]:\t" + doesWorkOut + "\nTravel[?]: \t" + canTravel + "\nSmokes[?]:\t" + doesSmoke);
+        "\nWorkOut[?]:\t" + doesWorkout + "\nTravel[?]: \t" + canTravel + "\nSmokes[?]:\t" + doesSmoke);
     }
 }

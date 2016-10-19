@@ -6,8 +6,8 @@ all he/she needs to know. The comments should usually include at least:
 
 PROJECT TITLE:				Model/ModelTester Class for Lab04
 PURPOSE OF PROJECT:			Learn to create Classes and driver classes
-VERSION or DATE:			1.1
+VERSION or DATE:			1.1 (Beta) 10/16/2016 declaring unstable due to lack of Unit Tests :)
 HOW TO START THIS PROJECT:	Run package.bluej file
 AUTHORS:					Krzysztof Szczurowski
-USER INSTRUCTIONS:			N/AUTHORS
+USER INSTRUCTIONS:			N/A
 REPO: 						https://github.com/kriss3/BCIT_JavaSem01-Lab04.git
