@@ -65,6 +65,10 @@ public class Model
        setName(name);
        setSurname(surname);
        setHeight(height);
+       doesWorkout(doesWorkout);
+       canTravel(canTravel);
+       doesSmoke(doesSmoke);
+       
        employeeNumber = employeeCounter++;
     }
     
@@ -99,7 +103,7 @@ public class Model
     }
     
     /**
-     * Publuc setter for Model's name. <br>
+     * Public setter for Model's name. <br>
      * Takes value as a new Name to setup. <br>
      * It does not return value.
      * @param takes value as String
@@ -116,7 +120,7 @@ public class Model
      */
     public String getSurname()
     {
-        return this.name;
+        return this.surname;
     }
     
     /**
@@ -127,7 +131,7 @@ public class Model
      */
     public final void  setSurname(String value)
     {
-        this.name = value.equals("") || value == null ? "Wright" : value; 
+        this.surname = value.equals("") || value == null ? "Wright" : value; 
     }
     
     /**
@@ -177,7 +181,7 @@ public class Model
      * Does not take any parameter;
      * @return returns canTravel flag as boolean
      */
-    public boolean CanTravel()
+    public boolean canTravel()
     {
         return this.canTravel;
     }
@@ -188,7 +192,7 @@ public class Model
      * It does not return value.
      * @param takes value canTravel as boolean
      */
-    public final void CanTravel(boolean value)
+    public final void canTravel(boolean value)
     {
         this.canTravel = value;
     }
@@ -198,7 +202,7 @@ public class Model
      * Does not take any parameter;
      * @return returns doesSmoke flag as boolean
      */
-    public boolean DoesSmoke()
+    public boolean doesSmoke()
     {
         return this.doesSmoke;
     }
@@ -209,7 +213,7 @@ public class Model
      * It does not return value.
      * @param takes value canSmoke as boolean
      */
-    public final void DoesSmoke(boolean value)
+    public final void doesSmoke(boolean value)
     {
         this.doesSmoke = value;
     }

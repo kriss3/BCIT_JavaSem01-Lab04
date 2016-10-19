@@ -19,13 +19,16 @@ public class ModelTester
         Model model2= new Model("Joanna", "Krupa", 193, true, false, true); 
         
         System.out.println("Model's Height in Feet and Inches: " + model1.convertHeightToFeetAndInches());
+        System.out.println("Model 1 hourly rate: " + model1.calculateHourlyRate());
         model1.displayModel();
         
-        System.out.println("Model's Height in Feet and Inches: " + model2.convertHeightToFeetAndInches());
-        model2.toString();
         
+        System.out.println("\n");
+        System.out.println("Model's Height in Feet and Inches: " + model2.convertHeightToFeetAndInches());
+        System.out.println("Model 2 hourly rate: " + model2.calculateHourlyRate());
         model2.displayModel();
         
-        Model.getEmployeeCounter();
+        System.out.println("\n");
+        System.out.println("Total number of Model objects created: " + Model.getEmployeeCounter());
     }
 }
