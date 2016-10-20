@@ -1,7 +1,7 @@
 #BlueJ class context
 comment0.params=
 comment0.target=Model()
-comment0.text=\r\n\ Public\ parameterless\ Model\ constructor\r\n\ Initializing\ all\ local\ variables\ to\ specified,\ default\ values\r\n\ Increments\ each\ newly\ created\ object\ of\ type\ Model\r\n
+comment0.text=\r\n\ Public\ parameterless\ Model\ constructor\r\n\ Initializing\ all\ local\ variables\ to\ specified,\ default\ values\r\n\ Increments\ each\ newly\ created\ object\ of\ a\ type\ Model\r\n
 comment1.params=name\ surname\ height\ doesWorkout\ canTravel\ doesSmoke
 comment1.target=Model(java.lang.String,\ java.lang.String,\ double,\ boolean,\ boolean,\ boolean)
 comment1.text=\r\n\ Public\ custom\ constructor.\ Takes\ six\ parameters\ described\ below\:\ <br>\r\n\ @param\ name\ as\ String;\r\n\ @param\ surname\ as\ String;\r\n\ @param\ height\ as\ double;\r\n\ @param\ doesWorkout\ as\ boolean;\r\n\ @param\ canTravel\ as\ boolean;\r\n\ @param\ doesSmoke\ as\ boolean;\r\n\ \r\n\ Increments\ each\ newly\ created\ object\ of\ type\ Model\ <br>\r\n\ Uses\ mutators\ to\ set\ values\ of\ instance\ variables\r\n
@@ -31,7 +31,7 @@ comment17.target=double\ calculateHourlyRate()
 comment17.text=\r\n\ Public\ method\ that\ calculates\ the\ Model's\ hourly\ rate;\ <br>\r\n\ It\ does\ not\ take\ any\ parameter;\ <br>\r\n\ Evaluates\ hourly\ rate\ and\ adjust\ based\ on\ Travel,\ Workout\ and\ Smoke\ preferences.\r\n\ @return\ returns\ calculated\ hourly\ rate\ as\ double\r\n
 comment18.params=
 comment18.target=java.lang.String\ toString()
-comment18.text=\r\n\ Publice\ methos\ that\ display\ String\ with\ representation\ of\ class\ Model\r\n\ It\ does\ not\ take\ any\ parameter;\ <br>\r\n\ @return\ returns\ text\ representation\ of\ Model\ Class\ as\ String;\r\n
+comment18.text=\r\n\ Public\ method\ that\ display\ String\ with\ representation\ of\ class\ Model\r\n\ It\ does\ not\ take\ any\ parameter;\ <br>\r\n\ @return\ returns\ text\ representation\ of\ Model\ Class\ as\ String;\r\n
 comment19.params=
 comment19.target=void\ displayModel()
 comment19.text=\r\n\ Public\ method\ that\ prints\ the\ details\ of\ the\ class\ Model;\r\n\ It\ does\ not\ take\ any\ parameter;\ <br>\r\n\ It\ does\ not\ return\ any\ value;\r\n
@@ -58,5 +58,5 @@ comment8.target=double\ getHeight()
 comment8.text=\r\n\ Public\ getter\ for\ model\ Height\ <br>\r\n\ Does\ not\ take\ any\ parameter;\r\n\ @return\ returns\ Height\ as\ double\r\n
 comment9.params=value
 comment9.target=void\ setHeight(double)
-comment9.text=\r\n\ Publuc\ setter\ for\ Model's\ Height.\ <br>\r\n\ Takes\ value\ as\ a\ new\ Height\ to\ setup\ <br>\r\n\ It\ does\ not\ return\ value.\r\n\ @param\ takes\ value\ as\ String\r\n
+comment9.text=\r\n\ Public\ setter\ for\ Model's\ Height.\ <br>\r\n\ Takes\ value\ as\ a\ new\ Height\ to\ setup\ <br>\r\n\ It\ does\ not\ return\ value.\r\n\ @param\ takes\ value\ as\ String\r\n
 numComments=20

@@ -6,7 +6,7 @@ all he/she needs to know. The comments should usually include at least:
 
 PROJECT TITLE:				Model/ModelTester Class for Lab04
 PURPOSE OF PROJECT:			Learn to create Classes and driver classes
-VERSION or DATE:			1.1 (Beta) 10/16/2016 declaring unstable due to lack of Unit Tests :)
+VERSION or DATE:			1.0 (Alpha) 10/16/2016
 HOW TO START THIS PROJECT:	Run package.bluej file
 AUTHORS:					Krzysztof Szczurowski
 USER INSTRUCTIONS:			N/A

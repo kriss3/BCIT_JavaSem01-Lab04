@@ -5,7 +5,7 @@
  * 
  * @author Krzysztof Szczurowski
  * @date 10/16/2016
- * @version 1.1 *more in Readme.txt*
+ * @version 1.0
  * @since 10/10/2016
  * @see https://learn.bcit.ca/d2l/le/content/331960/viewContent/2078019/View
  */
@@ -227,12 +227,12 @@ public class Model
      */
     public String convertHeightToFeetAndInches()
     {
-        //convert to Inches
-        double magicNumber = 0.3937008;
-        double feet = (height * magicNumber)/12;
+        //convert/get to Inches
+        double feet = (height * (1/CM_PER_INCH))/IN_PER_FOOT;
+        //1cm = 0.3937 ft/inches
         //1 inch  = 2.54 cm
-        //To express Feet in Inches multiple feet value by 12
-        double inches = (height/2.54) - ((int)feet * 12);
+        //To express Feet in Inches multiple feet value by CM_PER_INCH
+        double inches = (height/CM_PER_INCH) - ((int)feet * IN_PER_FOOT);
         
         return String.format((int)feet + " feet " + String.format("%.1f", inches) + " inches"); 
     }
